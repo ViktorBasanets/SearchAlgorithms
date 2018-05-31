@@ -76,6 +76,4 @@ public class BinarySearchTest {
         int actualResult = searchAgent.iterativeSearch(20, array2);
         assertEquals(expectedResult, actualResult);
     }
-
-
 }
