@@ -2,7 +2,7 @@ package BinarySearch;
 
 public class BinarySearch {
 
-    public int search(int target, int[] array) {
+    public int recursiveSearch(int target, int[] array) {
         int leftBorder = -1;
         int rightBorder = array.length;
         int lastElement = array[array.length - 1];
@@ -11,7 +11,7 @@ public class BinarySearch {
             return recursion(target, array, leftBorder, rightBorder);
         }
 
-        int boundaryIndex = recursionShifted(
+        int boundaryIndex = recursionForShiftedArray(
                 lastElement, array, leftBorder, rightBorder);
 
         if (target >= array[0]) {
@@ -47,7 +47,7 @@ public class BinarySearch {
         return recursion(target, array, leftBorder, rightBorder);
     }
 
-    private int recursionShifted(int target, int[] array,
+    private int recursionForShiftedArray(int target, int[] array,
                                  int leftBorder, int rightBorder) {
 
         if (leftBorder >= rightBorder - 1) {
@@ -62,6 +62,7 @@ public class BinarySearch {
             return leftBorder;
         }
 
-        return recursionShifted(target, array, leftBorder, rightBorder);
+        return recursionForShiftedArray(target, array,
+                leftBorder, rightBorder);
     }
 }
