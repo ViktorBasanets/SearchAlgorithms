@@ -29,7 +29,7 @@ public class BinarySearchTest {
     }
 
     @Test
-    public void testRecursiveSearchMethodInSortedArrayWithWhenValueIsNotPresent() {
+    public void testRecursiveSearchMethodInSortedArrayWhenValueIsNotPresent() {
         int expectedResult = -1;
         int actualResult = searchAgent.recursiveSearch(10, array1);
         assertEquals(expectedResult, actualResult);
@@ -43,7 +43,7 @@ public class BinarySearchTest {
     }
 
     @Test
-    public void testRecursiveSearchMethodInSortedButShiftedArrayWithWhenValueIsNotPresent() {
+    public void testRecursiveSearchMethodInSortedButShiftedArrayWhenValueIsNotPresent() {
         int expectedResult = -1;
         int actualResult = searchAgent.recursiveSearch(20, array2);
         assertEquals(expectedResult, actualResult);
