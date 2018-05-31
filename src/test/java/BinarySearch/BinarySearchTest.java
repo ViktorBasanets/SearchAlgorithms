@@ -49,5 +49,33 @@ public class BinarySearchTest {
         assertEquals(expectedResult, actualResult);
     }
 
+@Test
+    public void testIterativeSearchMethodInSortedArrayWhenValueIsPresent() {
+        int expectedResult = 6;
+        int actualResult = searchAgent.iterativeSearch(11, array1);
+        assertEquals(expectedResult, actualResult);
+    }
+
+    @Test
+    public void testIterativeSearchMethodInSortedArrayWhenValueIsNotPresent() {
+        int expectedResult = -1;
+        int actualResult = searchAgent.iterativeSearch(10, array1);
+        assertEquals(expectedResult, actualResult);
+    }
+
+    @Test
+    public void testIterativeSearchMethodInSortedButShiftedArrayWhenValueIsPresent() {
+        int expectedResult = 8;
+        int actualResult = searchAgent.iterativeSearch(5, array2);
+        assertEquals(expectedResult, actualResult);
+    }
+
+    @Test
+    public void testIterativeSearchMethodInSortedButShiftedArrayWhenValueIsNotPresent() {
+        int expectedResult = -1;
+        int actualResult = searchAgent.iterativeSearch(20, array2);
+        assertEquals(expectedResult, actualResult);
+    }
+
 
 }
